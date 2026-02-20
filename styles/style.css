@@ -681,7 +681,7 @@
 
 /* Footer Css */
 .footer__container {
-    background-color: #131313;
+    background-color: #151515;
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
@@ -703,6 +703,7 @@
     max-width: 1000px;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 .footer__links--wrapper{
