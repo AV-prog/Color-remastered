@@ -43,10 +43,18 @@ body {
     z-index: 2;
 }
 
-.sign-up-container{
+.sign-up-container {
     z-index: 1;
     opacity: 0;
+    transition: all 0.6s ease-in-out;
 }
+
+/* Add this new rule to your main CSS area */
+.form-container.active {
+    opacity: 1;
+    z-index: 5;
+}
+
 
 form{
     height: 100%;
@@ -273,6 +281,10 @@ p{
     }
 }
 
+.mobile--sign-up, .mobile--sign-in {
+    display: none;
+}
+
 @media screen and (max-width: 880px) {
    .container {
         width: 700px;
@@ -306,3 +318,66 @@ p{
         margin-top: 68px;
     }
 }
+
+@media screen and (max-width: 480px) {
+  .overlay-container {
+    display: none;
+  }
+
+  .container {
+    width: 95vw; /* Use viewport width for safety */
+    max-width: 400px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: background-color 0.6s ease;
+  }
+
+  .form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important; /* Force 100% width on mobile */
+    height: 100%;
+    padding: 0 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+  }
+
+  /* Force display for active form */
+  .form-container.active {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transform: translateX(0) !important;
+    z-index: 10;
+  }
+
+  .sign-in-container:not(.active) {
+    transform: translateX(-100%) !important;
+  }
+
+  .sign-up-container:not(.active) {
+    transform: translateX(100%) !important;
+  }
+
+  .mobile--sign-up, .mobile--sign-in {
+    display: block !important;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    width: 200px;
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+
+
+
+
