@@ -64,26 +64,22 @@
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button>Sign In</button>
+                    <button id="sign-in-btn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
                     <p>Enter your personal details and start journey with us</p>
-                    <button>Sign Up</button>
+                    <button id="sign-up-btn">Sign Up</button>
                 </div>
             </div>
             <button id="overlayBtn"></button>
         </div>
     </div>
-
-    <footer>
-        <mark>Welcome to the <a href="index.php">AV-TECH</a></mark>
-    </footer>
     
     <!-- js code -->
     <script>
         const container = document.getElementById('container');
-        const overlaycon = document.getElementById('overlaycon');
+        const overlayCon = document.getElementById('overlayCon');
         const overlayBtn = document.getElementById('overlayBtn');
 
         overlayBtn.addEventListener('click', () => {

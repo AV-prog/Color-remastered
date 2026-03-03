@@ -28,6 +28,7 @@ body {
     box-shadow: 25px 30px 55px #5557;
     border-radius: 13px;
     overflow: hidden;
+    padding-top: -20px;
 }
 
 .form-container{
@@ -272,19 +273,36 @@ p{
     }
 }
 
-footer {
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
-}
-footer mark {
-    padding: 8px 30px;
-    border-radius: 7px;
-}
-footer a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #003;
+@media screen and (max-width: 880px) {
+   .container {
+        width: 700px;
+    }
+
+    .sign-up-container h1 {
+        font-size: 28px;
+    }
+
+    .overlay-panel {
+        width: 300px;
+    }
+
+    .overlay-right p{
+        margin-left: 15px;
+    }
+    
+    #overlayBtn {
+        top: 338px;  
+        width: 150px;   
+    }
+
+    #sign-in-btn {
+        padding: 12px 35px;
+        margin-left: 8px;
+    }
+
+    #sign-up-btn {
+        padding: 12px 35px;
+        margin-left: 18px;
+        margin-top: 68px;
+    }
 }
